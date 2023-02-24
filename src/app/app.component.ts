@@ -3,8 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'assesment-3';
+  tuna = false;
+  item = 0;
+  array: Array<number> = [];
+  CreatePrag() {
+    this.tuna = !this.tuna;
+    this.item++;
+    this.array.push(this.item);
+  }
 }
